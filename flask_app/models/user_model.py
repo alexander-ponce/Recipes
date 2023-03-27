@@ -109,8 +109,6 @@ class Users:
                 flash('Invalid Credentials',"login")
                 is_valid=False
         
-        
-        
         if len(form_data['login_email']) <1 and len(form_data['login_password']) <1:
             flash('Invalid Crendentials', "login")
             is_valid = False

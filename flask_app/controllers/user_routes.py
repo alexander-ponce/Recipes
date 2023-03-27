@@ -20,14 +20,14 @@ def create_account():
     pw_hash = bcrypt.generate_password_hash(request.form['password'])
     # print(pw_hash)
     # put the pw_hash into the data dictionary
-    # data = {
-    #     "first_name": request.form['first_name'],
-    #     "last_name": request.form['last_name'],
-    #     "email": request.form['email'],
-    #     "password" : pw_hash
-    # }
+    data = {
+        "first_name": request.form['first_name'],
+        "last_name": request.form['last_name'],
+        "email": request.form['email'],
+        "password" : pw_hash
+    }
     # Call the save @classmethod on User
-    id = user_model.Users.save(request.form)
+    id = user_model.Users.save(data)
     # store user id into session
     session['user_id'] = id
 

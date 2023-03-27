@@ -15,7 +15,7 @@
         <h1 class="navbar-brand p-2 ml-5">Recipe Share</h1>
     </nav>
 <div class="d-flex justify-content-end flex-wrap align-content-around">   
-    <form action="/create/account" method="POST" class="p-4 col-4 mx-auto my-5 bg-dark text-light ">
+    <form action="/create/account" method="POST" class="p-4 col-4 mx-auto my-5 bg-info text-light ">
         {% with messages = get_flashed_messages(category_filter=['register']) %}
 				{% if messages %}
 					{% for message in messages %}
